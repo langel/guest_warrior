@@ -1,2 +1,2 @@
-# guest_warrior
+# Guest Warrior
 small rpg project
