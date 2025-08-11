@@ -56,9 +56,11 @@ float squirrel3_neg_float(uint32_t position, uint32_t seed) {
 
 // faster dice roles (from https://www.youtube.com/watch?v=3DvlLUWTNMY&ab_channel=Srcerer)
 // this def could be augmented to use squirrel3 - maybe shift right 16 before multiplying
+/*
 unsigned int randnum(unsigned int max) {
-	return ((uint64_t random() * max) >> 31;
+	return ((uint64_t) random() * max) >> 31;
 }
+*/
 
 
 // Linear Feedback Shift Registers

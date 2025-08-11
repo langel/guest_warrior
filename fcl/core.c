@@ -1,4 +1,22 @@
+#include <math.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+
 #include "SDL.h"
+
+#include "./lib/types.c"
+#include "./lib/string.c"
+#include "./lib/collision.c"
+#include "./lib/curve.c"
+#include "./lib/debug.c"
+#include "./lib/font.c"
+#include "./lib/lerp.c"
+#include "./lib/rng.c"
+
 SDL_Event fcl_event;
 int fcl_running;
 

@@ -2,10 +2,11 @@
 #define SDL_MAIN_HANDLED
 
 #include "./fcl/core.c"
+#include "./src/core.c"
 
 
 
-void main(int argc, char* args[]) {
+int main(int argc, char* args[]) {
 	debug_output_target = all;
 	debug_level = 4;
 	debug_out(1, "King Duck of Cluck Mountain");
@@ -16,10 +17,7 @@ void main(int argc, char* args[]) {
 	window_state_set_filename("guest_warrior");
 	window_init("Guest Warrior");
 	//dpipe_init("src/state_game_play.c");
-	fvc_init(SCREEN_W, SCREEN_H);
-	font_init();
-	grafx_init();
-	map_grafx_init();
+	fvc_init(420, 200);
 	state_controller_init();
 
 	// core main
@@ -32,12 +30,11 @@ void main(int argc, char* args[]) {
 	while (fcl_running) {
 		SDL_SetRenderTarget(fvc_renderer, fvc_texture);
 		state_controller_frame();
-		frame_counter++;
 		frame_wait_next();
 		fcl_update();
 		if (keys[SDL_SCANCODE_ESCAPE]) fcl_shutdown();
 	}
 	fcl_quit();
-	return;
+	return 0;
 }
 
