@@ -9,7 +9,7 @@
 int main(int argc, char* args[]) {
 	debug_output_target = all;
 	debug_level = 4;
-	debug_out(1, "King Duck of Cluck Mountain");
+	debug_out(1, "guest_warrior init");
 
 	// core init
 	fcl_init();
